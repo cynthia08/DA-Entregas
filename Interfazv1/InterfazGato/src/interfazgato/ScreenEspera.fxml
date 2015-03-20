@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" prefHeight="575.0" prefWidth="607.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="interfazgato.ScreenEsperaController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="451.0" layoutX="67.0" layoutY="62.0" stroke="$x1" strokeType="INSIDE" width="474.0">
+      <fill>
+        <Color blue="1.000" green="0.928" red="0.400" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0083cc" height="378.0" layoutX="103.0" layoutY="98.0" stroke="#006299" strokeType="INSIDE" width="399.0" />
+    <Text fill="WHITE" layoutX="196.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimate Tic Tac Toe">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="24.0" />
+      </font>
+    </Text>
+    <ImageView fitHeight="181.0" fitWidth="181.0" layoutX="215.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@loading1.gif" />
+      </image>
+    </ImageView>
+    <Label layoutX="226.0" layoutY="181.0" text="Buscando contrincante" textFill="WHITE">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="16.0" />
+      </font>
+    </Label>
+    <Button disable="false" layoutX="199.0" layoutY="397.0" mnemonicParsing="false" onAction="#goToEspera" prefHeight="40.0" prefWidth="210.0" text="Iniciar Juego" textFill="#004166">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="14.0" />
+      </font>
+    </Button>
+    <Label layoutX="260.0" layoutY="280.0" text="Nombre Jugador" visible="false" />
+  </children>
+</AnchorPane>
