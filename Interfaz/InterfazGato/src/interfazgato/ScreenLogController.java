@@ -5,6 +5,7 @@
  */
 package interfazgato;
 
+import Helpers.LogHelper;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -28,7 +29,7 @@ public class ScreenLogController implements Initializable, ControlScreen {
     TextField nombre;
     @FXML
     Label mensaje;
-
+    LogHelper help= new LogHelper();
    
 
     /**
@@ -37,6 +38,7 @@ public class ScreenLogController implements Initializable, ControlScreen {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
        
     }
 
@@ -54,9 +56,8 @@ public class ScreenLogController implements Initializable, ControlScreen {
             mensaje.setText("**Es necesario introducir nombre");
 
         } else {
+            help.setJugador(nom);
             controller.setScreen(InterfazGato.screenEsperaJuego);
-            JOptionPane.showMessageDialog(null, "Bienvenido a Ultimate Tic Tac Toe " + nom + "!!!");
-            //controlName.setNombre(nom);
         }
 
     }

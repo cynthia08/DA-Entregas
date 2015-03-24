@@ -5,11 +5,13 @@
  */
 package interfazgato;
 
+import Helpers.BuscarHelper;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -19,6 +21,8 @@ import javafx.fxml.Initializable;
 public class ScreenJuegosDispController implements Initializable, ControlScreen {
 
     ScreensController controller;
+    @FXML
+    Text contrincante;
 
     /**
      * Initializes the controller class.
@@ -26,6 +30,11 @@ public class ScreenJuegosDispController implements Initializable, ControlScreen 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+        BuscarHelper help= new BuscarHelper();
+        String nomJugador= help.getJugador();
+        contrincante.setText(nomJugador);
+                
     }
 
     @Override

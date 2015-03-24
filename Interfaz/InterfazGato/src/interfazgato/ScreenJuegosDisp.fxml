@@ -37,7 +37,7 @@
       </textFill>
     </Button>
     <Button font="$x2" layoutX="195.0" layoutY="264.0" mnemonicParsing="false" onAction="#goToUnirse" prefHeight="40.0" prefWidth="210.0" text="Unirse a juego" textFill="$x3" />
-    <Text fill="WHITE" layoutX="209.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre jugador disponible">
+    <Text fx:id="contrincante" fill="WHITE" layoutX="209.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre jugador disponible">
       <font>
         <Font name="Gill Sans Ultra Bold Condensed" size="16.0" />
       </font>

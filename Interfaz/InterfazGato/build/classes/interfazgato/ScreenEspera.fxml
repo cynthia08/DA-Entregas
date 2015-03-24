@@ -39,5 +39,10 @@
       </font>
     </Button>
     <Label layoutX="260.0" layoutY="280.0" text="Nombre Jugador" visible="false" />
+    <Text fx:id="nomContrincante" fill="WHITE" layoutX="288.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
+      </font>
+    </Text>
   </children>
 </AnchorPane>

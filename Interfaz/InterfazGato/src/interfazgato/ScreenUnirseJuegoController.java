@@ -5,6 +5,7 @@
  */
 package interfazgato;
 
+import Helpers.UnirseHelper;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -25,13 +26,13 @@ public class ScreenUnirseJuegoController implements Initializable, ControlScreen
     TextField nombre;
     @FXML
     Label mensaje;
+    UnirseHelper help= new UnirseHelper();
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+       
     }    
 
     @Override
@@ -45,9 +46,9 @@ public class ScreenUnirseJuegoController implements Initializable, ControlScreen
             mensaje.setText("**Es necesario introducir nombre");
 
         } else {
-            JOptionPane.showMessageDialog(null, "Bienvenido a Ultimate Tic Tac Toe "+ nom + "!!!");
             controller.setScreen(InterfazGato.screenGato);
-            //controlName.setNombre(nom);
+            help.setJugador(nom);
+            
         }
     }
     
