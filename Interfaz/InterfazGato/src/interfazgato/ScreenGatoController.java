@@ -34,6 +34,7 @@ public class ScreenGatoController implements Initializable, ControlScreen {
     ScreensController controller;
     Image imagenX = new Image("x.png");
     Image imagenO = new Image("o.png");
+    Image imagenE = new Image("e.png");
 
     @FXML
     ImageView ima00, ima01, ima02, ima03, ima04, ima05, ima06, ima07, ima08,
@@ -243,8 +244,29 @@ public class ScreenGatoController implements Initializable, ControlScreen {
                     tableros.getTableros().get(tablero).getCasillas().getCasilla().get(casilla).setContenido(jugadas.getJugadas().getTurno());
 
                     boolean tabGanado = almacen.getValida().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
+                    boolean juegoGanado = false;
+                    
                     if (tabGanado) {
                         ganaTablero(Integer.parseInt(tablero));
+                        tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido(jugadas.getJugadas().getTurno());
+                        juegoGanado = almacen.getValida().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
+                    }
+                    
+                    if (juegoGanado) {
+                        ganaJuego();
+                    }
+                    
+                    boolean tabEmpatado = almacen.getEmpate().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
+                    boolean juegoEmpatado = false;
+                    
+                    if(tabEmpatado) {
+                        empataTablero(Integer.parseInt(tablero));
+                        tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido("");
+                        juegoEmpatado = almacen.getEmpate().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
+                    }
+                    
+                    if (juegoEmpatado) {
+                        empataJuego();
                     }
                     
                     jugadas.getJugadas().cambiaTurno(jugadas.getJugadas().getTurno()); //Cambia turno
@@ -257,13 +279,39 @@ public class ScreenGatoController implements Initializable, ControlScreen {
 
     public void ganaTablero(int id) {
         Image imagen;
-            if(jugadas.getJugadas().getTurno().equals("X")){
-                imagen= imagenO;
-            }else{
-                imagen=imagenX;
-            }
-            for (int i = 0; i < 9; i++) {
-                contenedor.get(id).get(i).setImage(imagen);
-            }
+        
+        if(jugadas.getJugadas().getTurno().equals("X")){
+            imagen= imagenO;
+        }else{
+            imagen=imagenX;
         }
+        for (int i = 0; i < 9; i++) {
+            contenedor.get(id).get(i).setImage(imagen);
+        }
+    }
+    
+    public void ganaJuego() {
+        Image imagen;
+        
+        if(jugadas.getJugadas().getTurno().equals("X")){
+            imagen= imagenO;
+        }else{
+            imagen=imagenX;
+        }
+        for (int i = 0; i < 9; i++) {
+            ganaTablero(i);
+        }
+    }
+    
+    public void empataTablero(int id) {
+        for (int i = 0; i < 9; i++) {
+            contenedor.get(id).get(i).setImage(imagenE);
+        }
+    }
+    
+    public void empataJuego() {
+        for (int i = 0; i < 9; i++) {
+            empataTablero(i);
+        }
+    }
 }

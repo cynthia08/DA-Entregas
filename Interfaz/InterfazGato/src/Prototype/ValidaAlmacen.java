@@ -22,11 +22,13 @@ public class ValidaAlmacen {
         ve = new ValidaEmpate();
         vh.siguiente(vv);
         vv.siguiente(vd);
-        vd.siguiente(ve);
     }
     
     public ValidaHandler getValida() {
         return vh;
     }
-
+    
+    public ValidaHandler getEmpate() {
+        return ve;
+    }
 }
