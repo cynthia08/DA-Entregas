@@ -70,9 +70,9 @@
         <Image url="@tictactoe.png" />
       </image>
     </ImageView>
-    <ImageView fx:id="img" fitHeight="45.0" fitWidth="48.0" layoutX="62.0" layoutY="64.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img2" fitHeight="45.0" fitWidth="48.0" layoutX="113.0" layoutY="68.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView fx:id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="162.0" layoutY="65.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima00" disable="false" fitHeight="45.0" fitWidth="48.0" focusTraversable="false" layoutX="62.0" layoutY="64.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" visible="true" />
+    <ImageView fx:id="ima01" fitHeight="45.0" fitWidth="48.0" layoutX="113.0" layoutY="68.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima02" fitHeight="45.0" fitWidth="48.0" layoutX="162.0" layoutY="63.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
     <Text fx:id="nomJugador1" fill="$x1" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1">
       <font>
         <Font name="System Bold" size="18.0" />
@@ -83,83 +83,83 @@
         <Font size="18.0" />
       </font>
     </Text>
-    <ImageView id="img" fx:id="img4" fitHeight="45.0" fitWidth="48.0" layoutX="65.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img5" fitHeight="45.0" fitWidth="48.0" layoutX="110.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img6" fitHeight="45.0" fitWidth="48.0" layoutX="162.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img7" fitHeight="45.0" fitWidth="48.0" layoutX="62.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img8" fitHeight="45.0" fitWidth="48.0" layoutX="113.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img9" fitHeight="45.0" fitWidth="48.0" layoutX="163.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img10" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="64.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img11" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="68.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fx:id="img12" fitHeight="45.0" fitWidth="48.0" layoutX="338.0" layoutY="65.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img13" fitHeight="45.0" fitWidth="48.0" layoutX="241.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img14" fitHeight="45.0" fitWidth="48.0" layoutX="286.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img15" fitHeight="45.0" fitWidth="48.0" layoutX="338.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img16" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img17" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fx:id="img18" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="425.0" layoutY="63.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="476.0" layoutY="67.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="525.0" layoutY="64.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="428.0" layoutY="116.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="473.0" layoutY="116.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="525.0" layoutY="116.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="425.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="476.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="526.0" layoutY="167.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="63.0" layoutY="250.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="114.0" layoutY="254.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="163.0" layoutY="251.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="66.0" layoutY="303.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="111.0" layoutY="303.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="163.0" layoutY="303.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="63.0" layoutY="355.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="114.0" layoutY="355.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="164.0" layoutY="354.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="247.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="251.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="338.0" layoutY="248.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="241.0" layoutY="300.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="286.0" layoutY="300.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="338.0" layoutY="300.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="352.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="352.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="351.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="427.0" layoutY="249.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="478.0" layoutY="253.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="527.0" layoutY="250.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="430.0" layoutY="302.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="475.0" layoutY="302.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="527.0" layoutY="302.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="427.0" layoutY="354.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="478.0" layoutY="354.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="528.0" layoutY="353.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="65.0" layoutY="430.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="116.0" layoutY="434.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="165.0" layoutY="431.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="68.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="113.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="165.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="65.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="116.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="166.0" layoutY="534.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="239.0" layoutY="430.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="290.0" layoutY="434.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="431.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="242.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="287.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="239.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="290.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="340.0" layoutY="534.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="428.0" layoutY="430.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="479.0" layoutY="434.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img3" fitHeight="45.0" fitWidth="48.0" layoutX="528.0" layoutY="431.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="431.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="476.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="528.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="428.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="479.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <ImageView id="img" fitHeight="45.0" fitWidth="48.0" layoutX="529.0" layoutY="534.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima03" fitHeight="45.0" fitWidth="48.0" layoutX="65.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima04" fitHeight="45.0" fitWidth="48.0" layoutX="110.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima05" fitHeight="45.0" fitWidth="48.0" layoutX="162.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima06" fitHeight="45.0" fitWidth="48.0" layoutX="62.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima07" fitHeight="45.0" fitWidth="48.0" layoutX="113.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima08" fitHeight="45.0" fitWidth="48.0" layoutX="163.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima10" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="64.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima11" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="68.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima12" fitHeight="45.0" fitWidth="48.0" layoutX="337.0" layoutY="65.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima13" fitHeight="45.0" fitWidth="48.0" layoutX="241.0" layoutY="116.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima14" fitHeight="45.0" fitWidth="48.0" layoutX="286.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima15" fitHeight="45.0" fitWidth="48.0" layoutX="338.0" layoutY="117.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima16" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima17" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="169.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima18" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima20" fitHeight="45.0" fitWidth="48.0" layoutX="425.0" layoutY="63.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima21" fitHeight="45.0" fitWidth="48.0" layoutX="476.0" layoutY="67.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima22" fitHeight="45.0" fitWidth="48.0" layoutX="525.0" layoutY="64.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima23" fitHeight="45.0" fitWidth="48.0" layoutX="428.0" layoutY="116.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima24" fitHeight="45.0" fitWidth="48.0" layoutX="473.0" layoutY="116.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima25" fitHeight="45.0" fitWidth="48.0" layoutX="525.0" layoutY="116.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima26" fitHeight="45.0" fitWidth="48.0" layoutX="425.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima27" fitHeight="45.0" fitWidth="48.0" layoutX="476.0" layoutY="168.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima28" fitHeight="45.0" fitWidth="48.0" layoutX="526.0" layoutY="167.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima30" fitHeight="45.0" fitWidth="48.0" layoutX="63.0" layoutY="250.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima31" fitHeight="45.0" fitWidth="48.0" layoutX="114.0" layoutY="254.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima32" fitHeight="45.0" fitWidth="48.0" layoutX="163.0" layoutY="251.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima33" fitHeight="45.0" fitWidth="48.0" layoutX="66.0" layoutY="303.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima34" fitHeight="45.0" fitWidth="48.0" layoutX="111.0" layoutY="303.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima35" fitHeight="45.0" fitWidth="48.0" layoutX="163.0" layoutY="303.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima36" fitHeight="45.0" fitWidth="48.0" layoutX="63.0" layoutY="355.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima37" fitHeight="45.0" fitWidth="48.0" layoutX="114.0" layoutY="355.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima38" fitHeight="45.0" fitWidth="48.0" layoutX="164.0" layoutY="354.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima40" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="247.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima41" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="251.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima42" fitHeight="45.0" fitWidth="48.0" layoutX="338.0" layoutY="248.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima43" fitHeight="45.0" fitWidth="48.0" layoutX="241.0" layoutY="300.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima44" fitHeight="45.0" fitWidth="48.0" layoutX="286.0" layoutY="300.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima45" fitHeight="45.0" fitWidth="48.0" layoutX="338.0" layoutY="300.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima46" fitHeight="45.0" fitWidth="48.0" layoutX="238.0" layoutY="352.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima47" fitHeight="45.0" fitWidth="48.0" layoutX="289.0" layoutY="352.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima48" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="351.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima50" fitHeight="45.0" fitWidth="48.0" layoutX="427.0" layoutY="249.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima51" fitHeight="45.0" fitWidth="48.0" layoutX="478.0" layoutY="253.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima52" fitHeight="45.0" fitWidth="48.0" layoutX="527.0" layoutY="250.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima53" fitHeight="45.0" fitWidth="48.0" layoutX="430.0" layoutY="302.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima54" fitHeight="45.0" fitWidth="48.0" layoutX="475.0" layoutY="302.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima55" fitHeight="45.0" fitWidth="48.0" layoutX="527.0" layoutY="302.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima56" fitHeight="45.0" fitWidth="48.0" layoutX="427.0" layoutY="354.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima57" fitHeight="45.0" fitWidth="48.0" layoutX="478.0" layoutY="354.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima58" fitHeight="45.0" fitWidth="48.0" layoutX="528.0" layoutY="353.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima60" fitHeight="45.0" fitWidth="48.0" layoutX="65.0" layoutY="430.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima61" fitHeight="45.0" fitWidth="48.0" layoutX="116.0" layoutY="434.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima62" fitHeight="45.0" fitWidth="48.0" layoutX="165.0" layoutY="431.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima63" fitHeight="45.0" fitWidth="48.0" layoutX="68.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima64" fitHeight="45.0" fitWidth="48.0" layoutX="113.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima65" fitHeight="45.0" fitWidth="48.0" layoutX="165.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima66" fitHeight="45.0" fitWidth="48.0" layoutX="65.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima67" fitHeight="45.0" fitWidth="48.0" layoutX="116.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima68" fitHeight="45.0" fitWidth="48.0" layoutX="166.0" layoutY="534.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima70" fitHeight="45.0" fitWidth="48.0" layoutX="239.0" layoutY="430.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima71" fitHeight="45.0" fitWidth="48.0" layoutX="290.0" layoutY="434.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima72" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="431.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima73" fitHeight="45.0" fitWidth="48.0" layoutX="242.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima74" fitHeight="45.0" fitWidth="48.0" layoutX="287.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima75" fitHeight="45.0" fitWidth="48.0" layoutX="339.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima76" fitHeight="45.0" fitWidth="48.0" layoutX="239.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima77" fitHeight="45.0" fitWidth="48.0" layoutX="290.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima78" fitHeight="45.0" fitWidth="48.0" layoutX="340.0" layoutY="534.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima80" fitHeight="45.0" fitWidth="48.0" layoutX="428.0" layoutY="430.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima81" fitHeight="45.0" fitWidth="48.0" layoutX="479.0" layoutY="434.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima82" fitHeight="45.0" fitWidth="48.0" layoutX="528.0" layoutY="431.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima83" fitHeight="45.0" fitWidth="48.0" layoutX="431.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima84" fitHeight="45.0" fitWidth="48.0" layoutX="476.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima85" fitHeight="45.0" fitWidth="48.0" layoutX="528.0" layoutY="483.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima86" fitHeight="45.0" fitWidth="48.0" layoutX="428.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima87" fitHeight="45.0" fitWidth="48.0" layoutX="479.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ima88" fitHeight="45.0" fitWidth="48.0" layoutX="529.0" layoutY="534.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
   </children>
 </AnchorPane>

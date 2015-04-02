@@ -33,10 +33,13 @@
         <Font name="Gill Sans Ultra Bold Condensed" size="16.0" />
       </font>
     </Label>
-    <Button disable="false" layoutX="199.0" layoutY="397.0" mnemonicParsing="false" onAction="#goToEspera" prefHeight="40.0" prefWidth="210.0" text="Iniciar Juego" textFill="#004166">
+    <Button disable="false" layoutX="199.0" layoutY="367.0" mnemonicParsing="false" onAction="#goToEspera" prefHeight="40.0" prefWidth="210.0" text="Iniciar Juego">
       <font>
-        <Font name="Gill Sans Ultra Bold Condensed" size="14.0" />
+        <Font name="Gill Sans Ultra Bold Condensed" size="14.0" fx:id="x2" />
       </font>
+      <textFill>
+        <Color blue="0.400" green="0.255" red="0.000" fx:id="x3" />
+      </textFill>
     </Button>
     <Label layoutX="260.0" layoutY="280.0" text="Nombre Jugador" visible="false" />
     <Text fx:id="nomContrincante" fill="WHITE" layoutX="288.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -44,5 +47,6 @@
         <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
       </font>
     </Text>
+    <Button disable="false" font="$x2" layoutX="198.0" layoutY="420.0" mnemonicParsing="false" onAction="#goToMenu" prefHeight="40.0" prefWidth="210.0" text="Regresar" textFill="$x3" />
   </children>
 </AnchorPane>

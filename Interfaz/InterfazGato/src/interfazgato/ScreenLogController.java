@@ -61,4 +61,9 @@ public class ScreenLogController implements Initializable, ControlScreen {
         }
 
     }
+     @FXML
+    private void goToMenu(ActionEvent event) {
+        controller.setScreen(InterfazGato.screenHome);
+    }
+    
 }

@@ -21,24 +21,25 @@ import javax.swing.JOptionPane;
  * @author Cyn
  */
 public class ScreenUnirseJuegoController implements Initializable, ControlScreen {
+
     ScreensController controller;
     @FXML
     TextField nombre;
     @FXML
     Label mensaje;
-    UnirseHelper help= new UnirseHelper();
+    UnirseHelper help = new UnirseHelper();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        
-       
-    }    
+
+    }
 
     @Override
     public void setScreenParent(ScreensController screen) {
         controller = screen;
     }
+
     @FXML
     private void goToJuego(ActionEvent event) {
         String nom = nombre.getText();
@@ -48,8 +49,13 @@ public class ScreenUnirseJuegoController implements Initializable, ControlScreen
         } else {
             controller.setScreen(InterfazGato.screenGato);
             help.setJugador(nom);
-            
+
         }
     }
-    
+
+    @FXML
+    private void goToMenu(ActionEvent event) {
+        controller.setScreen(InterfazGato.screenHome);
+    }
+
 }

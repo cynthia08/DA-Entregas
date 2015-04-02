@@ -47,5 +47,8 @@ public class ScreenEsperaController implements Initializable, ControlScreen {
     private void goToEspera(ActionEvent event) {
         controller.setScreen(InterfazGato.screenGato);
     }
-    
+    @FXML
+    private void goToMenu(ActionEvent event) {
+        controller.setScreen(InterfazGato.screenHome);
+    }
 }
