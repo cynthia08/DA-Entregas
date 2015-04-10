@@ -17,14 +17,11 @@ public class ValidaEmpate implements ValidaHandler {
 
     @Override
     public boolean procesa(Casillas c, int pos) {
-        boolean fin = true;
-        
         for (int i = 0; i < 9; i++) {
             if(c.getCasilla().get(i).getContenido().matches("[1-9]")) {
-                fin = false;
+                return false;
             }
         }
-        
-        return fin;
-    }    
+        return true;
+    }
 }

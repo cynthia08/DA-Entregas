@@ -228,7 +228,6 @@ public class ScreenGatoController implements Initializable, ControlScreen {
             public void handle(MouseEvent event) {
                 if (tableros.getTableros().get("" + tablero).getCasillas().getFin() == false) {
                     if (tableros.getTableros().get("" + tablero).getCasillas().getCasilla().get(casilla).getFin() == false) {
-
                         if (turno.equals("O")) {
                             img.setImage(imagenO);
 
@@ -256,15 +255,14 @@ public class ScreenGatoController implements Initializable, ControlScreen {
                         }
 
                         boolean tabEmpatado = almacen.getEmpate().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
-                        boolean juegoEmpatado = false;
-
-                        if (tabEmpatado) {
+                        boolean juegoEmpatado = almacen.getEmpate().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
+                        
+                        if (tabEmpatado && !tabGanado) {
                             ganaTablero(Integer.parseInt(tablero), true);
                             tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido("");
-                            juegoEmpatado = almacen.getEmpate().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
                         }
 
-                        if (juegoEmpatado) {
+                        if (juegoEmpatado && !juegoGanado) {
                             ganaJuego(true);
                         }
 
@@ -277,7 +275,7 @@ public class ScreenGatoController implements Initializable, ControlScreen {
 
     public void ganaTablero(int id, boolean empate) {
         Image imagen;
-
+        
         if (empate) {
             imagen = imagenE;
         } else {
@@ -293,17 +291,6 @@ public class ScreenGatoController implements Initializable, ControlScreen {
     }
 
     public void ganaJuego(boolean empate) {
-        Image imagen;
-        
-        if(empate) {
-            imagen = imagenE;
-        } else {
-            if (jugadas.getJugadas().getTurno().equals("X"))
-                imagen = imagenX;
-            else
-                imagen = imagenO;
-        }
-
         for (int i = 0; i < 9; i++) {
             ganaTablero(i, empate);
         }

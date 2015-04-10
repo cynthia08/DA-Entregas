@@ -23,16 +23,20 @@ public class ValidaHorizontal implements ValidaHandler {
         
         if(p==0) {
             if(c.getCasilla().get(pos+1).getContenido().equals(c.getCasilla().get(pos+2).getContenido()))
-                return c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+2).getContenido());
+                if(c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+2).getContenido()))
+                    return true;
         }
         if(p==1) {
             if(c.getCasilla().get(pos-1).getContenido().equals(c.getCasilla().get(pos+1).getContenido()))
-                return c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+1).getContenido());
+                if(c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+1).getContenido()))
+                    return true;
         }
         if(p==2) {
             if(c.getCasilla().get(pos-1).getContenido().equals(c.getCasilla().get(pos-2).getContenido()))
-                return c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos-2).getContenido());
+                if(c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos-2).getContenido()))
+                    return true;
         }
+        
         return siguiente.procesa(c, pos);
     }
     

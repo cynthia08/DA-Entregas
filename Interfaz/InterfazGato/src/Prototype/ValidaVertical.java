@@ -19,18 +19,25 @@ public class ValidaVertical implements ValidaHandler {
 
     @Override
     public boolean procesa(Casillas c, int pos) {
+        
         if(pos>=0 && pos<3) {
             if(c.getCasilla().get(pos+3).getContenido().equals(c.getCasilla().get(pos+6).getContenido()))
-                return c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+6).getContenido());
+                if(c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+6).getContenido()))
+                    return true;
         }
+        
         if(pos>=3 && pos<6) {
             if(c.getCasilla().get(pos-3).getContenido().equals(c.getCasilla().get(pos+3).getContenido()))
-                return c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+3).getContenido());
+                if(c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos+3).getContenido()))
+                    return true;
         }
+        
         if(pos>=6 && pos<9) {
             if(c.getCasilla().get(pos-3).getContenido().equals(c.getCasilla().get(pos-6).getContenido()))
-                return c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos-6).getContenido());
+                if(c.getCasilla().get(pos).getContenido().equals(c.getCasilla().get(pos-6).getContenido()))
+                    return true;
         }
+        
         return siguiente.procesa(c, pos);
     }
     
