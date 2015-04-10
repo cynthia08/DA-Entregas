@@ -70,138 +70,137 @@ public class ScreenGatoController implements Initializable, ControlScreen {
         nomJugador1.setText(help.getJugador1());
         nomJugador2.setText(help.getJugador2());
 
-        
         List<ImageView> cero = new ArrayList<ImageView>() {
-        {
-            add(ima00);
-            add(ima01);
-            add(ima02);
-            add(ima03);
-            add(ima04);
-            add(ima05);
-            add(ima06);
-            add(ima07);
-            add(ima08);
-        }
-    };
-    List<ImageView> uno = new ArrayList<ImageView>() {
-        {
-            add(ima10);
-            add(ima11);
-            add(ima12);
-            add(ima13);
-            add(ima14);
-            add(ima15);
-            add(ima16);
-            add(ima17);
-            add(ima18);
-        }
-    };
-    List<ImageView> dos = new ArrayList<ImageView>() {
-        {
-            add(ima20);
-            add(ima21);
-            add(ima22);
-            add(ima23);
-            add(ima24);
-            add(ima25);
-            add(ima26);
-            add(ima27);
-            add(ima28);
-        }
-    };
-    List<ImageView> tres = new ArrayList<ImageView>() {
-        {
-            add(ima30);
-            add(ima31);
-            add(ima32);
-            add(ima33);
-            add(ima34);
-            add(ima35);
-            add(ima36);
-            add(ima37);
-            add(ima38);
-        }
-    };
-    List<ImageView> cuatro = new ArrayList<ImageView>() {
-        {
-            add(ima40);
-            add(ima41);
-            add(ima42);
-            add(ima43);
-            add(ima44);
-            add(ima45);
-            add(ima46);
-            add(ima47);
-            add(ima48);
-        }
-    };
-    List<ImageView> cinco = new ArrayList<ImageView>() {
-        {
-            add(ima50);
-            add(ima51);
-            add(ima52);
-            add(ima53);
-            add(ima54);
-            add(ima55);
-            add(ima56);
-            add(ima57);
-            add(ima58);
-        }
-    };
-    List<ImageView> seis = new ArrayList<ImageView>() {
-        {
-            add(ima60);
-            add(ima61);
-            add(ima62);
-            add(ima63);
-            add(ima64);
-            add(ima65);
-            add(ima66);
-            add(ima67);
-            add(ima68);
-        }
-    };
-    List<ImageView> siete = new ArrayList<ImageView>() {
-        {
-            add(ima70);
-            add(ima71);
-            add(ima72);
-            add(ima73);
-            add(ima74);
-            add(ima75);
-            add(ima76);
-            add(ima77);
-            add(ima78);
-        }
-    };
-    List<ImageView> ocho = new ArrayList<ImageView>() {
-        {
-            add(ima80);
-            add(ima81);
-            add(ima82);
-            add(ima83);
-            add(ima84);
-            add(ima85);
-            add(ima86);
-            add(ima87);
-            add(ima88);
-        }
-    };
+            {
+                add(ima00);
+                add(ima01);
+                add(ima02);
+                add(ima03);
+                add(ima04);
+                add(ima05);
+                add(ima06);
+                add(ima07);
+                add(ima08);
+            }
+        };
+        List<ImageView> uno = new ArrayList<ImageView>() {
+            {
+                add(ima10);
+                add(ima11);
+                add(ima12);
+                add(ima13);
+                add(ima14);
+                add(ima15);
+                add(ima16);
+                add(ima17);
+                add(ima18);
+            }
+        };
+        List<ImageView> dos = new ArrayList<ImageView>() {
+            {
+                add(ima20);
+                add(ima21);
+                add(ima22);
+                add(ima23);
+                add(ima24);
+                add(ima25);
+                add(ima26);
+                add(ima27);
+                add(ima28);
+            }
+        };
+        List<ImageView> tres = new ArrayList<ImageView>() {
+            {
+                add(ima30);
+                add(ima31);
+                add(ima32);
+                add(ima33);
+                add(ima34);
+                add(ima35);
+                add(ima36);
+                add(ima37);
+                add(ima38);
+            }
+        };
+        List<ImageView> cuatro = new ArrayList<ImageView>() {
+            {
+                add(ima40);
+                add(ima41);
+                add(ima42);
+                add(ima43);
+                add(ima44);
+                add(ima45);
+                add(ima46);
+                add(ima47);
+                add(ima48);
+            }
+        };
+        List<ImageView> cinco = new ArrayList<ImageView>() {
+            {
+                add(ima50);
+                add(ima51);
+                add(ima52);
+                add(ima53);
+                add(ima54);
+                add(ima55);
+                add(ima56);
+                add(ima57);
+                add(ima58);
+            }
+        };
+        List<ImageView> seis = new ArrayList<ImageView>() {
+            {
+                add(ima60);
+                add(ima61);
+                add(ima62);
+                add(ima63);
+                add(ima64);
+                add(ima65);
+                add(ima66);
+                add(ima67);
+                add(ima68);
+            }
+        };
+        List<ImageView> siete = new ArrayList<ImageView>() {
+            {
+                add(ima70);
+                add(ima71);
+                add(ima72);
+                add(ima73);
+                add(ima74);
+                add(ima75);
+                add(ima76);
+                add(ima77);
+                add(ima78);
+            }
+        };
+        List<ImageView> ocho = new ArrayList<ImageView>() {
+            {
+                add(ima80);
+                add(ima81);
+                add(ima82);
+                add(ima83);
+                add(ima84);
+                add(ima85);
+                add(ima86);
+                add(ima87);
+                add(ima88);
+            }
+        };
 
-    contenedor = new ArrayList<List<ImageView>>() {
-        {
-            add(cero);
-            add(uno);
-            add(dos);
-            add(tres);
-            add(cuatro);
-            add(cinco);
-            add(seis);
-            add(siete);
-            add(ocho);
-        }
-    };
+        contenedor = new ArrayList<List<ImageView>>() {
+            {
+                add(cero);
+                add(uno);
+                add(dos);
+                add(tres);
+                add(cuatro);
+                add(cinco);
+                add(seis);
+                add(siete);
+                add(ocho);
+            }
+        };
     }
 
     @FXML
@@ -221,97 +220,92 @@ public class ScreenGatoController implements Initializable, ControlScreen {
         ImageView img = (ImageView) event.getSource();
 
         String turno = jugadas.getJugadas().getTurno(); //Consigue el dibujo de letra actual
-        jugadas.getJugadas().cambiaTurno(jugadas.getJugadas().getTurno()); //Cambia turno
         String tablero = img.getId().charAt(3) + "";
-
         int casilla = Integer.parseInt(img.getId().charAt(4) + "");
 
-        if (tableros.getTableros().get(tablero).getCasillas().getFin() == false && tableros.getTableros().get(tablero).getCasillas().getCasilla().get(casilla).getFin() == false) {
-            img.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    if (turno.equals("O")) {
-                        img.setImage(imagenO);
+        img.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (tableros.getTableros().get("" + tablero).getCasillas().getFin() == false) {
+                    if (tableros.getTableros().get("" + tablero).getCasillas().getCasilla().get(casilla).getFin() == false) {
 
-                        nomJugador2.setFont(Font.font(null, FontWeight.NORMAL, 18));
-                        nomJugador1.setFont(Font.font(null, FontWeight.BOLD, 18));
-                    } else {
-                        img.setImage(imagenX);
-                        nomJugador2.setFont(Font.font(null, FontWeight.BOLD, 18));
-                        nomJugador1.setFont(Font.font(null, FontWeight.NORMAL, 18));
-                    }
+                        if (turno.equals("O")) {
+                            img.setImage(imagenO);
 
-                    tableros.getTableros().get(tablero).getCasillas().getCasilla().get(casilla).setContenido(jugadas.getJugadas().getTurno());
+                            nomJugador2.setFont(Font.font(null, FontWeight.NORMAL, 18));
+                            nomJugador1.setFont(Font.font(null, FontWeight.BOLD, 18));
+                        } else {
+                            img.setImage(imagenX);
+                            nomJugador2.setFont(Font.font(null, FontWeight.BOLD, 18));
+                            nomJugador1.setFont(Font.font(null, FontWeight.NORMAL, 18));
+                        }
 
-                    boolean tabGanado = almacen.getValida().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
-                    boolean juegoGanado = false;
-                    
-                    if (tabGanado) {
-                        ganaTablero(Integer.parseInt(tablero));
-                        tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido(jugadas.getJugadas().getTurno());
-                        juegoGanado = almacen.getValida().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
+                        tableros.getTableros().get(tablero).getCasillas().getCasilla().get(casilla).setContenido(jugadas.getJugadas().getTurno());
+
+                        boolean tabGanado = almacen.getValida().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
+                        boolean juegoGanado = false;
+
+                        if (tabGanado) {
+                            ganaTablero(Integer.parseInt(tablero), false);
+                            tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido(jugadas.getJugadas().getTurno());
+                            juegoGanado = almacen.getValida().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
+                        }
+
+                        if (juegoGanado) {
+                            ganaJuego(false);
+                        }
+
+                        boolean tabEmpatado = almacen.getEmpate().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
+                        boolean juegoEmpatado = false;
+
+                        if (tabEmpatado) {
+                            ganaTablero(Integer.parseInt(tablero), true);
+                            tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido("");
+                            juegoEmpatado = almacen.getEmpate().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
+                        }
+
+                        if (juegoEmpatado) {
+                            ganaJuego(true);
+                        }
+
+                        jugadas.getJugadas().cambiaTurno(jugadas.getJugadas().getTurno()); //Cambia turno
                     }
-                    
-                    if (juegoGanado) {
-                        ganaJuego();
-                    }
-                    
-                    boolean tabEmpatado = almacen.getEmpate().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
-                    boolean juegoEmpatado = false;
-                    
-                    if(tabEmpatado) {
-                        empataTablero(Integer.parseInt(tablero));
-                        tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido("");
-                        juegoEmpatado = almacen.getEmpate().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
-                    }
-                    
-                    if (juegoEmpatado) {
-                        empataJuego();
-                    }
-                    
-                    jugadas.getJugadas().cambiaTurno(jugadas.getJugadas().getTurno()); //Cambia turno
-                    
-                    //event.consume();
                 }
-            });
-        }
+            }
+        });
     }
 
-    public void ganaTablero(int id) {
+    public void ganaTablero(int id, boolean empate) {
         Image imagen;
-        
-        if(jugadas.getJugadas().getTurno().equals("X")){
-            imagen= imagenO;
-        }else{
-            imagen=imagenX;
+
+        if (empate) {
+            imagen = imagenE;
+        } else {
+            if (jugadas.getJugadas().getTurno().equals("X"))
+                imagen = imagenX;
+            else
+                imagen = imagenO;
         }
+
         for (int i = 0; i < 9; i++) {
             contenedor.get(id).get(i).setImage(imagen);
         }
     }
-    
-    public void ganaJuego() {
+
+    public void ganaJuego(boolean empate) {
         Image imagen;
         
-        if(jugadas.getJugadas().getTurno().equals("X")){
-            imagen= imagenO;
-        }else{
-            imagen=imagenX;
+        if(empate) {
+            imagen = imagenE;
+        } else {
+            if (jugadas.getJugadas().getTurno().equals("X"))
+                imagen = imagenX;
+            else
+                imagen = imagenO;
         }
+
         for (int i = 0; i < 9; i++) {
-            ganaTablero(i);
-        }
-    }
-    
-    public void empataTablero(int id) {
-        for (int i = 0; i < 9; i++) {
-            contenedor.get(id).get(i).setImage(imagenE);
-        }
-    }
-    
-    public void empataJuego() {
-        for (int i = 0; i < 9; i++) {
-            empataTablero(i);
+            ganaTablero(i, empate);
         }
     }
 }

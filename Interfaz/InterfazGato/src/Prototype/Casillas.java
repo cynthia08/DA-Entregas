@@ -28,15 +28,7 @@ public class Casillas {
         
         fin = false;
     }
-    
-    public boolean validarCasillas(int x){
-        if(casillas.size() < 3) {
-            return false;
-        }
-     
-        return true;
-    }
-    
+        
     public ArrayList<Casilla> getCasilla() {
         return casillas;
     }
