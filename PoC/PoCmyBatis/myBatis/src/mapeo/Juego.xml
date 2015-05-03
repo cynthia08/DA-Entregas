@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+ "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Juego">
+    <select id="getJuego" resultClass="entidades.Juego">
+        SELECT id as id,
+        JugadorUno as idJugador1,
+        JugadorDos as idJugador2,
+        Ganador as ganador
+        FROM JUEGO
+        WHERE id = #value#
+    </select>
+    <insert id="insertJuego" parameterClass="entidades.Juego">
+        INSERT INTO
+        JUEGO (JugadorUno, JugadorDos, Ganador)
+        VALUES (#idJugador1#,#idJugador2#,#ganador#)
+    </insert>
+    <select id="getAllG" resultClass="entidades.Juego">
+      SELECT * FROM JUEGO
+   </select>
+</sqlMap>
