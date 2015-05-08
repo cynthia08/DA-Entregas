@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="606.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="interfazgato.ScreenUnirseJuegoController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="451.0" layoutX="66.0" layoutY="60.0" stroke="$x1" strokeType="INSIDE" width="474.0">
+      <fill>
+        <Color blue="1.000" green="0.928" red="0.400" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0083cc" height="378.0" layoutX="102.0" layoutY="96.0" stroke="#006299" strokeType="INSIDE" width="399.0" />
+    <Text fill="WHITE" layoutX="194.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimate Tic Tac Toe">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="24.0" />
+      </font>
+    </Text>
+    <Text fill="WHITE" layoutX="172.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Jugador:">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="16.0" />
+      </font>
+    </Text>
+    <TextField id="nomJugador" fx:id="nombre" layoutX="297.0" layoutY="211.0" prefHeight="33.0" prefWidth="139.49609375" />
+    <Button layoutX="196.0" layoutY="309.0" mnemonicParsing="false" onAction="#goToJuego" prefHeight="40.0" prefWidth="210.0" text="Empezar Juego">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="14.0" fx:id="x2" />
+      </font>
+      <textFill>
+        <Color blue="0.400" green="0.255" red="0.000" fx:id="x3" />
+      </textFill>
+    </Button>
+    <Label fx:id="mensaje" font="$x2" layoutX="301.0" layoutY="258.0" text="" textFill="RED" />
+    <Button font="$x2" layoutX="196.0" layoutY="370.0" mnemonicParsing="false" onAction="#goToMenu" prefHeight="40.0" prefWidth="210.0" text="Regresar" textFill="$x3" />
+  </children>
+</AnchorPane>
