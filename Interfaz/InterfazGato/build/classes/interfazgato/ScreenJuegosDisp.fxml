@@ -23,12 +23,12 @@
         <Font name="Gill Sans Ultra Bold Condensed" size="24.0" />
       </font>
     </Text>
-    <Text fill="WHITE" layoutX="236.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Juego Disponible:">
+    <Text fill="WHITE" layoutX="242.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Record Juegos:">
       <font>
         <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
       </font>
     </Text>
-    <Button layoutX="195.0" layoutY="329.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="40.0" prefWidth="209.49609375" text="Regresar a menu">
+    <Button layoutX="195.0" layoutY="392.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="40.0" prefWidth="209.49609375" text="Regresar a menu">
       <font>
         <Font name="Gill Sans Ultra Bold Condensed" size="14.0" fx:id="x2" />
       </font>
@@ -36,11 +36,5 @@
         <Color blue="0.400" green="0.160" red="0.000" fx:id="x3" />
       </textFill>
     </Button>
-    <Button font="$x2" layoutX="195.0" layoutY="264.0" mnemonicParsing="false" onAction="#goToUnirse" prefHeight="40.0" prefWidth="210.0" text="Unirse a juego" textFill="$x3" />
-    <Text fx:id="contrincante" fill="WHITE" layoutX="209.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre jugador disponible">
-      <font>
-        <Font name="Gill Sans Ultra Bold Condensed" size="16.0" />
-      </font>
-    </Text>
   </children>
 </AnchorPane>

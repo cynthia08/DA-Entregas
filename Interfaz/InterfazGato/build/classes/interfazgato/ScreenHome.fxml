@@ -26,7 +26,7 @@
         <Color blue="0.400" green="0.256" red="0.000" fx:id="x3" />
       </textFill>
     </Button>
-    <Button font="$x2" layoutX="195.0" layoutY="286.0" mnemonicParsing="false" onAction="#goToBuscar" prefHeight="41.0" prefWidth="211.0" text="Buscar Juegos Disponibles" textFill="$x3" />
+    <Button font="$x2" layoutX="195.0" layoutY="286.0" mnemonicParsing="false" onAction="#goToBuscar" prefHeight="41.0" prefWidth="211.0" text="Record Juegos" textFill="$x3" />
     <Text fill="WHITE" layoutX="150.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimate Tic Tac Toe">
       <font>
         <Font name="Gill Sans Ultra Bold" size="25.0" />

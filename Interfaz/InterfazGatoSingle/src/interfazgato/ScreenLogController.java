@@ -5,17 +5,15 @@
  */
 package interfazgato;
 
-import Helpers.LogHelper;
+import cliente.Cliente;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -29,7 +27,6 @@ public class ScreenLogController implements Initializable, ControlScreen {
     TextField nombre;
     @FXML
     Label mensaje;
-   
 
     /**
      * Initializes the controller class.
@@ -37,33 +34,30 @@ public class ScreenLogController implements Initializable, ControlScreen {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        
-       
     }
 
     @Override
     public void setScreenParent(ScreensController screen) {
         controller = screen;
-
     }
 
     @FXML
-    private void goToEspera(ActionEvent event) {
+    private void goToEspera(ActionEvent event) throws IOException {
         String nom = nombre.getText();
-
         if (nom.trim().isEmpty()) {
             mensaje.setText("**Es necesario introducir nombre");
-
-        } else if (nom.length()>=10){
+        } else if (nom.length() >= 10) {
             mensaje.setText("**No se puede exceder de 10 caracteres.");
-        }else {
-            LogHelper.setJugador1(nom);
+        } else {
+            String resServer = Cliente.goServer("agregaJugador(" + nom + ")");
+            System.out.println("Resserver= "+resServer);
             controller.setScreen(InterfazGato.screenEsperaJuego);
         }
     }
-     @FXML
+
+    @FXML
     private void goToMenu(ActionEvent event) {
         controller.setScreen(InterfazGato.screenHome);
     }
-    
+
 }

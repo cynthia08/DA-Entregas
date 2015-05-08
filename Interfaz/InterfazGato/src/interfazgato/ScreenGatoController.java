@@ -6,7 +6,7 @@
 package interfazgato;
 
 import Handlers.ManejadorJugadas;
-import Helpers.GatoHelper;
+import Helpers.LogHelper;
 import Prototype.AlmacenTableros;
 import Prototype.ValidaAlmacen;
 import java.net.URL;
@@ -19,11 +19,14 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -39,7 +42,18 @@ public class ScreenGatoController implements Initializable, ControlScreen {
     ScreensController controller;
     Image imagenX = new Image("x.png");
     Image imagenO = new Image("o.png");
-    Image imagenE = new Image("e.png");
+    Image imagenE = new Image("gato5.png");
+
+    @FXML
+    Button jugarButton;
+    @FXML
+    Pane saludo;
+    @FXML
+    Pane panelGanador;
+    @FXML
+    Text labelGanador;
+    @FXML
+    Rectangle rec;
 
     @FXML
     ImageView ima00, ima01, ima02, ima03, ima04, ima05, ima06, ima07, ima08,
@@ -52,13 +66,11 @@ public class ScreenGatoController implements Initializable, ControlScreen {
             ima70, ima71, ima72, ima73, ima74, ima75, ima76, ima77, ima78,
             ima80, ima81, ima82, ima83, ima84, ima85, ima86, ima87, ima88;
     List<List<ImageView>> contenedor;
-    
+
     ValidaAlmacen almacen = new ValidaAlmacen();
     ManejadorJugadas jugadas = new ManejadorJugadas(); //Crea maneja jugadas
     AlmacenTableros tableros = new AlmacenTableros(); //Crea tablero logico
-  
-    
-    
+
     //tableros.getTableros().get(""+tablero).getCasillas().getCasilla().get(casilla).setContenido(jugadas.getJugadas().getTurno());
     //Arriba ubica tablero y casilla logica
     @FXML
@@ -71,13 +83,10 @@ public class ScreenGatoController implements Initializable, ControlScreen {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        GatoHelper help = new GatoHelper();
-        help.procesaJugadores();
-
-        nomJugador1.setText(help.getJugador1());
-        nomJugador2.setText(help.getJugador2());
-
+        nomJugador1.setText(LogHelper.getJugador1());
+        nomJugador2.setText(LogHelper.getJugador2());
+        panelGanador.setVisible(false);
+        rec.setVisible(false);
         List<ImageView> cero = new ArrayList<ImageView>() {
             {
                 add(ima00);
@@ -209,6 +218,7 @@ public class ScreenGatoController implements Initializable, ControlScreen {
                 add(ocho);
             }
         };
+
     }
 
     @FXML
@@ -216,27 +226,62 @@ public class ScreenGatoController implements Initializable, ControlScreen {
         Platform.exit();
     }
 
+    @FXML
+    private void volverJuego(ActionEvent event) {
+        controller.setScreen(InterfazGato.screenInicioJuego);
+        saludo.setVisible(true);
+        jugarButton.setDisable(false);
+        panelGanador.setVisible(false);
+        rec.setVisible(false);
+        nomJugador1.setText(null);
+        nomJugador2.setText(null);
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                contenedor.get(i).get(j).setImage(null);
+
+            }
+        }
+
+    }
+
+    @FXML
+    private void empiezaJuego(ActionEvent event) {
+        nomJugador1.setText(LogHelper.getJugador1());
+        nomJugador2.setText(LogHelper.getJugador2());
+        saludo.setVisible(false);
+        jugarButton.setDisable(true);
+        rec.setVisible(false);
+        almacen = new ValidaAlmacen();
+        jugadas = new ManejadorJugadas();
+        tableros = new AlmacenTableros();
+
+        nomJugador2.setFont(Font.font(null, FontWeight.NORMAL, 18));
+        nomJugador1.setFont(Font.font(null, FontWeight.BOLD, 18));
+
+        System.out.println("turno: " + jugadas.getJugadas().getTurno());
+
+    }
+
     @Override
     public void setScreenParent(ScreensController screen) {
         controller = screen;
-
     }
 
     @FXML
     private void handle(MouseEvent event) {
         ImageView img = (ImageView) event.getSource();
-
-        String turno = jugadas.getJugadas().getTurno(); //Consigue el dibujo de letra actual
-        String tablero = img.getId().charAt(3) + "";
-        int casilla = Integer.parseInt(img.getId().charAt(4) + "");
-
         img.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                String turno = jugadas.getJugadas().getTurno(); //Consigue el dibujo de letra actual
+                String tablero = img.getId().charAt(3) + "";
+                int casilla = Integer.parseInt(img.getId().charAt(4) + "");
                 if (tableros.getTableros().get("" + tablero).getCasillas().getFin() == false) {
                     if (tableros.getTableros().get("" + tablero).getCasillas().getCasilla().get(casilla).getFin() == false) {
                         if (turno.equals("O")) {
                             img.setImage(imagenO);
+                            //mandar al servidor el turno en esa casilla
+                            
                             nomJugador2.setFont(Font.font(null, FontWeight.NORMAL, 18));
                             nomJugador1.setFont(Font.font(null, FontWeight.BOLD, 18));
                         } else {
@@ -246,48 +291,29 @@ public class ScreenGatoController implements Initializable, ControlScreen {
                         }
 
                         tableros.getTableros().get(tablero).getCasillas().getCasilla().get(casilla).setContenido(jugadas.getJugadas().getTurno());
-
+                        
                         boolean tabGanado = almacen.getValida().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
                         boolean juegoGanado = false;
 
                         if (tabGanado) {
                             ganaTablero(Integer.parseInt(tablero), false);
                             tableros.getTableroGeneral().getCasillas().getCasilla().get(Integer.parseInt(tablero)).setContenido(jugadas.getJugadas().getTurno());
+                            System.out.println("almacen tableros" + tableros.getTableros().get(tablero).getCasillas().getCasilla().get(casilla).getFin());
                             juegoGanado = almacen.getValida().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
                         }
 
                         if (juegoGanado) {
                             ganaJuego(false);
                             if (jugadas.getJugadas().getTurno().equals("X")) {
-                                Label secondLabel = new Label("Ganador " + nomJugador1.getText());
-
-                                StackPane secondaryLayout = new StackPane();
-                                secondaryLayout.getChildren().add(secondLabel);
-
-                                Scene secondScene = new Scene(secondaryLayout, 200, 100);
-
-                                Stage secondStage = new Stage();
-                                secondStage.setTitle("Ganador!!");
-                                secondStage.setScene(secondScene);
-                                secondStage.show();
-                                System.out.println("Ganador " + nomJugador1.getText());
+                                panelGanador.setVisible(true);
+                                rec.setVisible(true);
+                                labelGanador.setText("Ganador " + nomJugador1.getText() + " !!!");
                             } else {
-                                Label secondLabel = new Label("Ganador " + nomJugador2.getText());
-
-                                StackPane secondaryLayout = new StackPane();
-                                secondaryLayout.getChildren().add(secondLabel);
-
-                                Scene secondScene = new Scene(secondaryLayout, 200, 100);
-
-                                Stage secondStage = new Stage();
-                                secondStage.setTitle("Ganador!!");
-                                secondStage.setScene(secondScene);
-                                secondStage.show();
-                                System.out.println("Ganador " + nomJugador2.getText());
+                                panelGanador.setVisible(true);
+                                rec.setVisible(true);
+                                labelGanador.setText("Ganador " + nomJugador2.getText() + " !!!");
                             }
-
                         }
-
                         boolean tabEmpatado = almacen.getEmpate().procesa(tableros.getTableros().get(tablero).getCasillas(), casilla);
                         boolean juegoEmpatado = almacen.getEmpate().procesa(tableros.getTableroGeneral().getCasillas(), Integer.parseInt(tablero));
 
@@ -298,22 +324,15 @@ public class ScreenGatoController implements Initializable, ControlScreen {
 
                         if (juegoEmpatado) {
                             ganaJuego(true);
-                            Label secondLabel = new Label("Empate");
-
-                            StackPane secondaryLayout = new StackPane();
-                            secondaryLayout.getChildren().add(secondLabel);
-
-                            Scene secondScene = new Scene(secondaryLayout, 200, 100);
-
-                            Stage secondStage = new Stage();
-                            secondStage.setTitle("Fue gato!!");
-                            secondStage.setScene(secondScene);
-                            secondStage.show();
+                            panelGanador.setVisible(true);
+                            rec.setVisible(true);
+                            labelGanador.setText("Empate fue gato. ");
                         }
 
                         jugadas.getJugadas().cambiaTurno(jugadas.getJugadas().getTurno()); //Cambia turno
                     }
                 }
+                //event.consume();
             }
         });
     }

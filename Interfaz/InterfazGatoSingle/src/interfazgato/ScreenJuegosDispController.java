@@ -50,7 +50,7 @@ public class ScreenJuegosDispController implements Initializable, ControlScreen 
     
     @FXML
     private void goToUnirse(ActionEvent event) {
-        controller.setScreen(InterfazGato.screenUnirse);
+        controller.setScreen(InterfazGato.screenGato);
 
     }
 

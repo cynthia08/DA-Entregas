@@ -47,7 +47,7 @@ public class ScreenUnirseJuegoController implements Initializable, ControlScreen
             mensaje.setText("**Es necesario introducir nombre");
 
         } else {
-            controller.setScreen(InterfazGato.screenGato);
+            controller.setScreen(InterfazGato.screenBuscar);
             help.setJugador(nom);
 
         }

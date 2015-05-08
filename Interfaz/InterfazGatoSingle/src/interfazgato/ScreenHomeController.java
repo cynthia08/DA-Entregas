@@ -40,7 +40,7 @@ public class ScreenHomeController implements Initializable, ControlScreen {
     }    
     @FXML
     private void goToBuscar(ActionEvent event) {
-        controller.setScreen(InterfazGato.screenBuscar); 
+        controller.setScreen(InterfazGato.screenUnirse); 
     } 
     
     @FXML

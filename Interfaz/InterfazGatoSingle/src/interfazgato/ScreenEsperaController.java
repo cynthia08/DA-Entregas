@@ -5,7 +5,7 @@
  */
 package interfazgato;
 
-import Helpers.EsperaHelper;
+import cliente.Juego;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -28,25 +28,18 @@ public class ScreenEsperaController implements Initializable, ControlScreen {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        
-        EsperaHelper help= new EsperaHelper();
-        String contrincante=help.getJugadorNom();
-        nomContrincante.setText(contrincante);
-        
-        
-        
+        nomContrincante.setText(Integer.toString(Juego.getJugador2()));
     }  
     @Override
     public void setScreenParent(ScreensController screen) {
         controller = screen;
-
     }
 
     @FXML
     private void goToEspera(ActionEvent event) {
         controller.setScreen(InterfazGato.screenGato);
     }
+    
     @FXML
     private void goToMenu(ActionEvent event) {
         controller.setScreen(InterfazGato.screenHome);

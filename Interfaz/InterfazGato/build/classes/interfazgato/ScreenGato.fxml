@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" minHeight="604.9765625" prefHeight="604.9765625" prefWidth="633.9765625" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="interfazgato.ScreenGatoController">
+<AnchorPane id="AnchorPane" minHeight="604.9765625" prefHeight="618.9765625" prefWidth="656.9765625" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="interfazgato.ScreenGatoController">
   <children>
     <Text layoutX="196.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimate Tic Tac Toe">
       <fill>
@@ -20,7 +20,7 @@
         <Font name="System Bold" size="24.0" />
       </font>
     </Text>
-    <ImageView fitHeight="586.9765625" fitWidth="586.9765625" layoutX="24.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fitHeight="586.9765625" fitWidth="586.9765625" layoutX="24.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@tictactoe.png" />
       </image>
@@ -75,7 +75,7 @@
     <ImageView fx:id="ima02" fitHeight="45.0" fitWidth="48.0" layoutX="162.0" layoutY="63.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
     <Text fx:id="nomJugador1" fill="$x1" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1">
       <font>
-        <Font name="System Bold" size="18.0" />
+        <Font name="System Bold" size="18.0" fx:id="x2" />
       </font>
     </Text>
     <Text fx:id="nomJugador2" fill="$x1" layoutX="525.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2">
@@ -161,10 +161,42 @@
     <ImageView fx:id="ima86" fitHeight="45.0" fitWidth="48.0" layoutX="428.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
     <ImageView fx:id="ima87" fitHeight="45.0" fitWidth="48.0" layoutX="479.0" layoutY="535.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
     <ImageView fx:id="ima88" fitHeight="45.0" fitWidth="48.0" layoutX="529.0" layoutY="534.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" />
-    <Button layoutX="542.0" layoutY="566.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="78.4072265625" text="Salir" textFill="#0021cc">
+    <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="525.0" layoutX="60.0" layoutY="64.0" opacity="0.59" stroke="WHITE" strokeType="INSIDE" width="513.0" />
+    <Button layoutX="567.0" layoutY="580.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="78.4072265625" text="Salir" textFill="$x1">
       <font>
-        <Font name="System Bold" size="12.0" />
+        <Font name="System Bold" size="13.0" fx:id="x3" />
       </font>
     </Button>
+    <Pane fx:id="saludo" layoutX="129.0" layoutY="170.0" prefHeight="253.0" prefWidth="374.0">
+      <children>
+        <Rectangle arcHeight="20.0" arcWidth="5.0" height="243.0" opacity="0.99" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="8.5" width="374.0">
+          <fill>
+            <Color blue="0.682" green="0.443" red="0.184" fx:id="x5" />
+          </fill>
+          <stroke>
+            <Color blue="1.000" green="0.714" red="0.200" fx:id="x6" />
+          </stroke>
+        </Rectangle>
+        <Text fill="#f8f4f4" font="$x2" layoutX="25.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido a Ultimate Tic Tac Toe !!!!" />
+        <Text fill="#fcf9f9" layoutX="69.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona &quot;Jugar&quot; para comenzar">
+          <font>
+            <Font name="System Bold" size="15.0" fx:id="x7" />
+          </font>
+        </Text>
+        <Button fx:id="jugarButton" font="$x3" layoutX="146.0" layoutY="162.0" mnemonicParsing="false" onAction="#empiezaJuego" prefHeight="26.0" prefWidth="83.0" text="Jugar!!" textFill="$x1" />
+      </children>
+    </Pane>
+    <Pane fx:id="panelGanador" layoutX="165.0" layoutY="170.0" prefHeight="200.0" prefWidth="298.0" visible="false">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x5" height="200.0" layoutX="0.0" layoutY="0.0" stroke="$x6" strokeType="INSIDE" strokeWidth="8.5" width="298.0" />
+        <Text fx:id="labelGanador" fill="WHITE" font="$x7" layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ganador" textAlignment="CENTER" />
+        <Button layoutX="93.0" layoutY="72.0" mnemonicParsing="false" onAction="#volverJuego" prefHeight="31.921875" prefWidth="112.0" text="Volver a Jugar" textFill="$x1">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x8" />
+          </font>
+        </Button>
+        <Button font="$x8" layoutX="110.0" layoutY="135.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="78.4072265625" text="Salir" textFill="$x1" />
+      </children>
+    </Pane>
   </children>
 </AnchorPane>

@@ -7,8 +7,6 @@ package Conexion;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 
 /**
  *
@@ -30,21 +28,6 @@ public class Servicio extends Conexion {
         return id;
     }
 
-    public ArrayList<Integer> buscarJuego() {
-        ArrayList<Integer> al = new ArrayList<>();
-        try {
-            this.conectar();
-            this.consulta = this.con.prepareCall("call buscarJuego()");
-            ResultSet datos = this.consulta.executeQuery();
-            datos.next();
-            al.add(datos.getInt("JuegoID"));
-            al.add(datos.getInt("JugadorUno"));
-            this.desconectar();
-        } catch (SQLException ex) {
-        }
-        return al;
-    }
-
     public String getNombre(int id) {
         String nombre = null;
         try {
@@ -60,13 +43,13 @@ public class Servicio extends Conexion {
         return nombre;
     }
 
-    public int insertarJugador(int juegoID, String jugador) {
+    public int crearJuego(int jugador1, int jugador2) {
         int id = 0;
         try {
             this.conectar();
-            this.consulta = this.con.prepareCall("call insertarJugador(?, ?)");
-            this.consulta.setInt(1, juegoID);
-            this.consulta.setString(2, jugador);
+            this.consulta = this.con.prepareCall("call crearJuego(?, ?)");
+            this.consulta.setInt(1, jugador1);
+            this.consulta.setInt(2, jugador2);
             ResultSet datos = this.consulta.executeQuery();
             datos.next();
             id = datos.getInt("ID");

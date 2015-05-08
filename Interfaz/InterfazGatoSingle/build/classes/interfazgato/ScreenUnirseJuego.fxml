@@ -28,7 +28,7 @@
       </font>
     </Text>
     <TextField id="nomJugador" fx:id="nombre" layoutX="297.0" layoutY="211.0" prefHeight="33.0" prefWidth="139.49609375" />
-    <Button layoutX="196.0" layoutY="309.0" mnemonicParsing="false" onAction="#goToJuego" prefHeight="40.0" prefWidth="210.0" text="Empezar Juego">
+    <Button layoutX="196.0" layoutY="309.0" mnemonicParsing="false" onAction="#goToJuego" prefHeight="40.0" prefWidth="210.0" text="Buscar Jugador">
       <font>
         <Font name="Gill Sans Ultra Bold Condensed" size="14.0" fx:id="x2" />
       </font>

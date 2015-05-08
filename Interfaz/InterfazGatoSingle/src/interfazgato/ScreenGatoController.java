@@ -6,8 +6,6 @@
 package interfazgato;
 
 import Handlers.ManejadorJugadas;
-import Helpers.GatoHelper;
-import Helpers.LogHelper;
 import Prototype.AlmacenTableros;
 import Prototype.ValidaAlmacen;
 import java.net.URL;
@@ -61,13 +59,7 @@ public class ScreenGatoController implements Initializable, ControlScreen {
             ima70, ima71, ima72, ima73, ima74, ima75, ima76, ima77, ima78,
             ima80, ima81, ima82, ima83, ima84, ima85, ima86, ima87, ima88;
     List<List<ImageView>> contenedor;
-    
-    ValidaAlmacen almacen = new ValidaAlmacen();
-    ManejadorJugadas jugadas = new ManejadorJugadas(); //Crea maneja jugadas
-    AlmacenTableros tableros = new AlmacenTableros(); //Crea tablero logico
-  
-    
-    
+          
     //tableros.getTableros().get(""+tablero).getCasillas().getCasilla().get(casilla).setContenido(jugadas.getJugadas().getTurno());
     //Arriba ubica tablero y casilla logica
     @FXML
@@ -221,8 +213,9 @@ public class ScreenGatoController implements Initializable, ControlScreen {
     
     @FXML
     private void empiezaJuego(ActionEvent event) {
-        nomJugador1.setText(LogHelper.getJugador1());
-        nomJugador2.setText(LogHelper.getJugador2());
+        //Llama al controlador para obtener nombres
+        nomJugador1.setText("1");
+        nomJugador2.setText("2");        
         saludo.setVisible(false);
         jugarButton.setDisable(true);
     }
@@ -237,13 +230,14 @@ public class ScreenGatoController implements Initializable, ControlScreen {
     private void handle(MouseEvent event) {
         ImageView img = (ImageView) event.getSource();
 
-        String turno = jugadas.getJugadas().getTurno(); //Consigue el dibujo de letra actual
+        String turno = jugadas.getJugadas().getTurno(); //Consigue el dibujo de letra actual desde el servidor o sean en el controlador
         String tablero = img.getId().charAt(3) + "";
         int casilla = Integer.parseInt(img.getId().charAt(4) + "");
 
         img.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                //Aqui se manda a llamar al controlador
                 if (tableros.getTableros().get("" + tablero).getCasillas().getFin() == false) {
                     if (tableros.getTableros().get("" + tablero).getCasillas().getCasilla().get(casilla).getFin() == false) {
                         if (turno.equals("O")) {
@@ -328,7 +322,7 @@ public class ScreenGatoController implements Initializable, ControlScreen {
             }
         });
     }
-
+    //Ambos en el servidor
     public void ganaTablero(int id, boolean empate) {
         Image imagen;
 

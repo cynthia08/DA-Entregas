@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="607.0000779296824" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="interfazgato.ScreenInstrucciones2Controller">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="451.0" layoutX="68.0" layoutY="62.0" stroke="$x1" strokeType="INSIDE" width="474.0">
+      <fill>
+        <Color blue="1.000" green="0.928" red="0.400" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0083cc" height="378.0" layoutX="103.0" layoutY="98.0" stroke="#006299" strokeType="INSIDE" width="399.0" />
+    <Label layoutX="205.0" layoutY="23.0" text="Ultimate Tic Tac Toe" textFill="#003d99">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="24.0" />
+      </font>
+    </Label>
+    <Label layoutX="106.0" layoutY="114.0" prefHeight="22.0" prefWidth="399.0" text="6. Para ganar tienes hacer que formar una linea" textFill="WHITE">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="18.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label font="$x2" layoutX="118.0" layoutY="139.0" prefHeight="23.0" prefWidth="385.0" text="diagonal vertical u horizontal como en el clásico" textFill="WHITE" />
+    <Label font="$x2" layoutX="106.0" layoutY="197.0" prefHeight="23.0" prefWidth="399.0" text="7. Pero para ganar una casilla completa tendras" textFill="WHITE" />
+    <Label font="$x2" layoutX="125.0" layoutY="222.0" prefHeight="23.0" prefWidth="354.0" text="que ganar el gato contenido en esa casilla." textFill="WHITE" />
+    <ImageView fitHeight="196.03549194335938" fitWidth="188.23863664047275" layoutX="201.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@tablero.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="58.05557383104366" fitWidth="57.00001525878906" layoutX="144.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@flecha-roja.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="392.0" layoutY="320.0" prefHeight="22.0" prefWidth="110.0" text="Buena Suerte!!" textFill="WHITE">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="17.0" />
+      </font>
+    </Label>
+    <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="424.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@face.png" />
+      </image>
+    </ImageView>
+    <Button layoutX="413.0" layoutY="476.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="30.0" prefWidth="110.0" text="Regresar a Menu" textFill="#002966">
+      <font>
+        <Font name="Gill Sans Ultra Bold Condensed" size="12.0" />
+      </font>
+    </Button>
+    <ImageView fx:id="imaPrev" fitHeight="74.0" fitWidth="74.0" layoutX="103.0" layoutY="402.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@arrow2.png" />
+      </image>
+    </ImageView>
+    <Label font="$x2" layoutX="118.0" layoutY="165.0" prefHeight="23.0" prefWidth="124.0" text="juego de gato." textFill="WHITE" />
+  </children>
+</AnchorPane>
